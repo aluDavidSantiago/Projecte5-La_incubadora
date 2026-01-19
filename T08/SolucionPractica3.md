@@ -1,13 +1,7 @@
-Perfecto, gracias por explicarlo con tanto detalle.
-A continuación te organizo **la PRÁCTICA 3 (WannaCry)** en forma de **guía estructurada**, con **orden lógico**, **pasos claros**, y **lenguaje natural**, siguiendo el mismo estilo que las guías anteriores y basándome exactamente en lo que hiciste (no añado cosas raras).
-
----
-
 # Guía práctica 3
 
 ## Prueba práctica de ransomware: WannaCry
 
----
 
 ## 1. Preparación del entorno
 
@@ -19,7 +13,6 @@ A continuación te organizo **la PRÁCTICA 3 (WannaCry)** en forma de **guía es
    * Eliminación o desactivación de carpetas compartidas.
    * Uso exclusivo de la máquina virtual para la práctica, sin acceso a equipos reales.
 
----
 
 ## 2. Descarga del malware WannaCry
 
@@ -28,7 +21,6 @@ A continuación te organizo **la PRÁCTICA 3 (WannaCry)** en forma de **guía es
 2. Se pulsó el botón **Code** (verde) y se descargó el repositorio completo en formato comprimido.
 3. Una vez descargado el archivo, se localizó dentro de las carpetas comprimidas el directorio correspondiente a **Ransomware.WannaCry**.
 
----
 
 ## 3. Primer intento de extracción con Windows Defender activo
 
@@ -39,7 +31,6 @@ A continuación te organizo **la PRÁCTICA 3 (WannaCry)** en forma de **guía es
 
 Este comportamiento confirma que el antivirus detecta el malware y evita su ejecución por defecto.
 
----
 
 ## 4. Desactivación de las protecciones de Windows Defender
 
@@ -55,7 +46,6 @@ Este comportamiento confirma que el antivirus detecta el malware y evita su ejec
 > * Envío automático de muestras
 > * Protección contra alteraciones (si es posible)
 
----
 
 ## 5. Extracción del ransomware WannaCry
 
@@ -66,7 +56,6 @@ Este comportamiento confirma que el antivirus detecta el malware y evita su ejec
 5. Se eligió el **Escritorio** como ubicación de extracción.
 6. El contenido se extrajo correctamente sin que Windows Defender lo bloqueara.
 
----
 
 ## 6. Ejecución del ransomware WannaCry
 
@@ -78,7 +67,6 @@ Este comportamiento confirma que el antivirus detecta el malware y evita su ejec
    * Modificaciones visibles en el entorno del sistema.
 4. El programa principal de WannaCry (ventana de negociación del rescate) fue eliminado automáticamente por Windows Defender, a pesar de que aparentemente todas las protecciones estaban desactivadas.
 
----
 
 ## 7. Restauración del programa de negociación
 
@@ -93,7 +81,6 @@ Este comportamiento confirma que el antivirus detecta el malware y evita su ejec
 
 Además, el ransomware cambió el fondo de pantalla del sistema mostrando un mensaje que indica que el malware es consciente de que el antivirus puede haber eliminado la interfaz de negociación.
 
----
 
 ## 8. Observación de los efectos del ransomware
 
@@ -102,7 +89,6 @@ Además, el ransomware cambió el fondo de pantalla del sistema mostrando un men
 3. Se documentó el mensaje de rescate mostrado por WannaCry.
 4. No se realizó ningún intento de pago ni conexión externa.
 
----
 
 ## 9. Restauración del sistema
 
@@ -110,16 +96,8 @@ Además, el ransomware cambió el fondo de pantalla del sistema mostrando un men
 2. Se restauró la instantánea **“Antes del virus”**.
 3. El sistema volvió a su estado original, completamente limpio y sin infección.
 
----
 
 ## 10. Conclusión
 
 Esta práctica permite observar de forma controlada el comportamiento real de un ransomware como WannaCry, así como comprobar cómo Windows Defender actúa incluso cuando parte de sus protecciones están desactivadas. La realización de la práctica en una máquina virtual aislada y el uso de instantáneas resulta fundamental para evitar daños permanentes y riesgos de seguridad.
 
----
-
-Si quieres, en el siguiente mensaje puedo:
-
-* Ajustar el texto exactamente al **lenguaje que usa tu profesor**
-* Hacer una versión **más corta** para entregar
-* O unificar las **prácticas 1, 2 y 3** en un solo documento bien presentado
