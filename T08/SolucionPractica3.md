@@ -71,7 +71,7 @@ Este comportamiento confirma que el antivirus detecta el malware y evita su ejec
 
 - Se verificó nuevamente que la máquina virtual seguía aislada de la red.
 
-<img src="img/35.png" alt="35" width="600" height="auto">
+<img src="img/40.png" alt="40" width="600" height="auto">
 
 - Se ejecutó el archivo ejecutable de WannaCry.
 - Tras la ejecución, se observaron cambios en el sistema:
@@ -80,6 +80,8 @@ Este comportamiento confirma que el antivirus detecta el malware y evita su ejec
    * Modificaciones visibles en el entorno del sistema.
 - El programa principal de WannaCry (ventana de negociación del rescate) fue eliminado automáticamente por Windows Defender, a pesar de que aparentemente todas las protecciones estaban desactivadas.
 
+<img src="img/41.png" alt="41" width="600" height="auto">
+<img src="img/42.png" alt="42" width="600" height="auto">
 
 ## 7. Restauración del programa de negociación
 
@@ -87,10 +89,15 @@ Este comportamiento confirma que el antivirus detecta el malware y evita su ejec
 - Se entró en el **Historial de protección**.
 - Se localizó el archivo eliminado correspondiente a WannaCry.
 - Se seleccionó la opción **Restaurar** para recuperar el programa de negociación.
+
+<img src="img/43.png" alt="43" width="600" height="auto">
+
 - Tras restaurarlo, se pudo observar:
 
    * El mensaje de rescate.
    * La interfaz de negociación para liberar el sistema.
+
+<img src="img/45.png" alt="45" width="600" height="auto">
 
 Además, el ransomware cambió el fondo de pantalla del sistema mostrando un mensaje que indica que el malware es consciente de que el antivirus puede haber eliminado la interfaz de negociación.
 
@@ -102,13 +109,15 @@ Además, el ransomware cambió el fondo de pantalla del sistema mostrando un men
 - Se documentó el mensaje de rescate mostrado por WannaCry.
 - No se realizó ningún intento de pago ni conexión externa.
 
+<img src="img/44.png" alt="44" width="600" height="auto">
 
 ## 9. Restauración del sistema
 
-1. Tras finalizar la observación del comportamiento del ransomware, se apagó la máquina virtual.
-2. Se restauró la instantánea **“Antes del virus”**.
-3. El sistema volvió a su estado original, completamente limpio y sin infección.
+- Tras finalizar la observación del comportamiento del ransomware, se apagó la máquina virtual.
+- Se restauró la instantánea **“Antes del virus”**.
+- El sistema volvió a su estado original, completamente limpio y sin infección.
 
+<img src="img/60.png" alt="60" width="600" height="auto">
 
 ## 10. Conclusión
 
