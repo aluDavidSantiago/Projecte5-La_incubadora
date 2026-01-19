@@ -97,10 +97,10 @@ Además, el ransomware cambió el fondo de pantalla del sistema mostrando un men
 
 ## 8. Observación de los efectos del ransomware
 
-1. Se comprobó qué archivos habían sido cifrados.
-2. Se observó que el ransomware afecta a determinados tipos de archivos.
-3. Se documentó el mensaje de rescate mostrado por WannaCry.
-4. No se realizó ningún intento de pago ni conexión externa.
+- Se comprobó qué archivos habían sido cifrados.
+- Se observó que el ransomware afecta a determinados tipos de archivos.
+- Se documentó el mensaje de rescate mostrado por WannaCry.
+- No se realizó ningún intento de pago ni conexión externa.
 
 
 ## 9. Restauración del sistema
