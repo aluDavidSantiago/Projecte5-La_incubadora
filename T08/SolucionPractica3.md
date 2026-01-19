@@ -5,41 +5,50 @@
 
 ## 1. Preparación del entorno
 
-1. Se inició la máquina virtual con Windows 11.
-2. Antes de realizar cualquier acción, se creó una **instantánea (snapshot)** de la máquina virtual con el nombre *“Antes del virus”*, para poder restaurar el sistema al finalizar la práctica.
-3. Se tomaron medidas de aislamiento para evitar cualquier propagación:
+- Se inició la máquina virtual con Windows 11.
+- Antes de realizar cualquier acción, se creó una **instantánea (snapshot)** de la máquina virtual con el nombre *“Antes del virus”*, para poder restaurar el sistema al finalizar la práctica.
+- Se tomaron medidas de aislamiento para evitar cualquier propagación:
 
    * Desconexión de la interfaz de red de la máquina virtual.
    * Eliminación o desactivación de carpetas compartidas.
    * Uso exclusivo de la máquina virtual para la práctica, sin acceso a equipos reales.
 
-
 ## 2. Descarga del malware WannaCry
 
-1. Se accedió al repositorio de GitHub:
+- Se accedió al repositorio de GitHub:
    [https://github.com/ytisf/theZoo](https://github.com/ytisf/theZoo)
-2. Se pulsó el botón **Code** (verde) y se descargó el repositorio completo en formato comprimido.
-3. Una vez descargado el archivo, se localizó dentro de las carpetas comprimidas el directorio correspondiente a **Ransomware.WannaCry**.
+- Se pulsó el botón **Code** (verde) y se descargó el repositorio completo en formato comprimido.
 
+<img src="img/31.png" alt="31" width="600" height="auto">
+
+- Una vez descargado el archivo, se localizó dentro de las carpetas comprimidas el directorio correspondiente a **Ransomware.WannaCry**.
+
+<img src="img/32.png" alt="32" width="600" height="auto">
 
 ## 3. Primer intento de extracción con Windows Defender activo
 
-1. Se intentó descomprimir la carpeta **Ransomware.WannaCry**.
-2. Durante el intento de extracción, **Windows Defender bloqueó la acción**.
-3. Apareció una notificación indicando que **se habían encontrado amenazas** y que la extracción no se podía completar por motivos de seguridad.
-4. Se cerraron las notificaciones y la ventana de error de extracción.
+- Se intentó descomprimir la carpeta **Ransomware.WannaCry**.
+- Durante el intento de extracción, **Windows Defender bloqueó la acción**.
+- Apareció una notificación indicando que **se habían encontrado amenazas** y que la extracción no se podía completar por motivos de seguridad.
+
+<img src="img/33.png" alt="33" width="600" height="auto">
+
+- Se cerraron las notificaciones y la ventana de error de extracción.
 
 Este comportamiento confirma que el antivirus detecta el malware y evita su ejecución por defecto.
 
 
 ## 4. Desactivación de las protecciones de Windows Defender
 
-1. Se abrió **Seguridad de Windows**.
-2. Se accedió a **Protección antivirus y contra amenazas**.
-3. Se desactivó la **protección en tiempo real**.
-4. Para asegurar la ejecución del malware, se desactivaron el resto de protecciones activas de Windows Defender.
+- Se abrió **Seguridad de Windows**.
+- Se accedió a **Protección antivirus y contra amenazas**.
+- Se desactivó la **protección en tiempo real**.
 
-> Nota: Para que la práctica funcione correctamente, las protecciones que normalmente deben desactivarse son:
+<img src="img/34.png" alt="34" width="600" height="auto">
+
+- Para asegurar la ejecución del malware, se desactivaron el resto de protecciones activas de Windows Defender.
+
+> Nota: Para que la práctica funcione correctamente, yo ya las tenia pero las protecciones que normalmente deben desactivarse son:
 >
 > * Protección en tiempo real
 > * Protección basada en la nube
@@ -49,32 +58,36 @@ Este comportamiento confirma que el antivirus detecta el malware y evita su ejec
 
 ## 5. Extracción del ransomware WannaCry
 
-1. Se volvió a intentar la extracción de la carpeta **Ransomware.WannaCry**.
-2. Esta vez se abrió correctamente la ventana de extracción.
-3. El sistema solicitó una contraseña para descomprimir el contenido.
-4. Se introdujo la contraseña **infected**.
-5. Se eligió el **Escritorio** como ubicación de extracción.
-6. El contenido se extrajo correctamente sin que Windows Defender lo bloqueara.
-
+- Se volvió a intentar la extracción de la carpeta **Ransomware.WannaCry**.
+- Esta vez se abrió correctamente la ventana de extracción.
+- El sistema solicitó una contraseña para descomprimir el contenido.
+- Se introdujo la contraseña **infected**.
+- Se eligió el **Escritorio** como ubicación de extracción.
+- El contenido se extrajo correctamente sin que Windows Defender lo bloqueara.
+   
+<img src="img/35.png" alt="35" width="600" height="auto">
 
 ## 6. Ejecución del ransomware WannaCry
 
-1. Se verificó nuevamente que la máquina virtual seguía aislada de la red.
-2. Se ejecutó el archivo ejecutable de WannaCry.
-3. Tras la ejecución, se observaron cambios en el sistema:
+- Se verificó nuevamente que la máquina virtual seguía aislada de la red.
+
+<img src="img/35.png" alt="35" width="600" height="auto">
+
+- Se ejecutó el archivo ejecutable de WannaCry.
+- Tras la ejecución, se observaron cambios en el sistema:
 
    * Archivos cifrados.
    * Modificaciones visibles en el entorno del sistema.
-4. El programa principal de WannaCry (ventana de negociación del rescate) fue eliminado automáticamente por Windows Defender, a pesar de que aparentemente todas las protecciones estaban desactivadas.
+- El programa principal de WannaCry (ventana de negociación del rescate) fue eliminado automáticamente por Windows Defender, a pesar de que aparentemente todas las protecciones estaban desactivadas.
 
 
 ## 7. Restauración del programa de negociación
 
-1. Se accedió nuevamente a **Seguridad de Windows**.
-2. Se entró en el **Historial de protección**.
-3. Se localizó el archivo eliminado correspondiente a WannaCry.
-4. Se seleccionó la opción **Restaurar** para recuperar el programa de negociación.
-5. Tras restaurarlo, se pudo observar:
+- Se accedió nuevamente a **Seguridad de Windows**.
+- Se entró en el **Historial de protección**.
+- Se localizó el archivo eliminado correspondiente a WannaCry.
+- Se seleccionó la opción **Restaurar** para recuperar el programa de negociación.
+- Tras restaurarlo, se pudo observar:
 
    * El mensaje de rescate.
    * La interfaz de negociación para liberar el sistema.
