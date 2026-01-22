@@ -1,17 +1,10 @@
-Aquí la tienes, Santiago:  
-**tu guía completa en Markdown**, limpia, ordenada y lista para entregar o copiar donde necesites.  
-Sin teoría, solo pasos.  
-Adaptada exactamente a tu práctica.
-
-***
-
-# # Práctica Completa FTP y SFTP
+# Práctica Completa FTP y SFTP
 
 ## Transferencia de archivos, chroot, pruebas y capturas
 
 ***
 
-# ## Datos del entorno
+## Datos del entorno
 
     Usuario FTP: ftpuser
     Usuario SFTP: sftpuser
@@ -20,7 +13,7 @@ Adaptada exactamente a tu práctica.
 
 ***
 
-# # FASE 1 — Instalación básica de FTP (vsftpd)
+# FASE 1 — Instalación básica de FTP (vsftpd)
 
 ```bash
 sudo apt update
@@ -31,7 +24,7 @@ sudo adduser ftpuser
 
 ***
 
-# # FASE 2 — Configuración completa de vsftpd
+# FASE 2 — Configuración completa de vsftpd
 
 ```bash
 sudo mkdir -p /home/ftpuser/ftp
@@ -63,7 +56,7 @@ Contenido requerido:
 
 Abrir puertos:
 
-```bash
+```
 sudo ufw allow 21/tcp
 sudo ufw allow 40000:40010/tcp
 sudo systemctl restart vsftpd
@@ -71,25 +64,25 @@ sudo systemctl restart vsftpd
 
 ***
 
-# # FASE 3 — Prueba desde Windows (CMD)
+# FASE 3 — Prueba desde Windows (CMD)
 
 En CMD:
 
-```cmd
+```
 cd C:\Users\Usuario\Desktop
 ftp 192.168.56.101
 ```
 
 Login → luego:
 
-```cmd
+```
 put archivo.txt
 bye
 ```
 
 ***
 
-# # FASE 4 — Prueba FTP con FileZilla + Wireshark
+# FASE 4 — Prueba FTP con FileZilla + Wireshark
 
 ### FileZilla
 
@@ -112,9 +105,9 @@ Capturar usuario/contraseña en claro.
 
 ***
 
-# # FASE 5 — Instalación y preparación de SFTP
+# FASE 5 — Instalación y preparación de SFTP
 
-```bash
+```
 sudo apt install -y openssh-server
 sudo adduser sftpuser
 sudo mkdir -p /home/sftpuser/upload
@@ -125,9 +118,9 @@ sudo chown sftpuser:sftpuser /home/sftpuser/upload
 
 ***
 
-# # FASE 6 — Configuración del chroot seguro en SFTP
+# FASE 6 — Configuración del chroot seguro en SFTP
 
-```bash
+```
 sudo nano /etc/ssh/sshd_config
 ```
 
@@ -145,24 +138,24 @@ Añadir:
 
 Reiniciar:
 
-```bash
+```
 sudo systemctl restart ssh
 ```
 
 ***
 
-# # FASE 7 — Prueba SFTP desde PowerShell
+# FASE 7 — Prueba SFTP desde PowerShell
 
 En PowerShell:
 
-```powershell
+```
 cd C:\Users\Usuario\Desktop
 sftp sftpuser@192.168.56.101
 ```
 
 Dentro:
 
-```powershell
+```
 pwd
 cd upload
 put archivo.txt
@@ -172,7 +165,7 @@ exit
 
 ***
 
-# # FASE 8 — Prueba SFTP con FileZilla + Wireshark
+# FASE 8 — Prueba SFTP con FileZilla + Wireshark
 
 ### FileZilla
 
@@ -192,23 +185,23 @@ Ver solo paquetes cifrados (`Encrypted packet`).
 
 ***
 
-# # FASE 9 — Verificación final y pruebas cruzadas
+# FASE 9 — Verificación final y pruebas cruzadas
 
 ### Servicio FTP:
 
-```bash
+```
 sudo systemctl status vsftpd
 ```
 
 ### Servicio SSH:
 
-```bash
+```
 sudo systemctl status ssh
 ```
 
 ### FTP (CMD)
 
-```cmd
+```
 ftp 192.168.56.101
 put archivo.txt
 ```
@@ -219,7 +212,7 @@ put archivo.txt
 
 ### SFTP (PowerShell)
 
-```powershell
+```
 sftp sftpuser@192.168.56.101
 put archivo.txt
 ```
@@ -232,15 +225,9 @@ Todo cifrado.
 
 ***
 
-# ## FIN DE LA PRÁCTICA ✔
+## FIN DE LA PRÁCTICA ✔
 
 FTP funcionando + SFTP funcionando + chroot + pruebas + capturas.
 
 ***
 
-Si quieres, también te puedo generar:  
-📄 **Un informe final listo para entregar (PDF o Word)**  
-📸 **Lista de capturas obligatorias**  
-📝 **Resumen técnico final**
-
-¿Quieres alguno?
