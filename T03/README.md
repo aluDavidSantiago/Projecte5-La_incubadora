@@ -32,4 +32,4 @@ Treballareu amb màquines virtuals per configurar:
 - **Examen pràctic (60%)**: desplegament complet d’un servidor FTP i un SFTP, configuració d’usuaris i verificació de connexions des d’un client extern.
 
 Prepareu les vostres màquines virtuals i el vostre entorn de treball. Comença el vostre camí cap al domini dels serveis de transferència de fitxers.
-```
+
