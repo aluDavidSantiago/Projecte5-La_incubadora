@@ -57,9 +57,60 @@ A continuación se detallan los requisitos mínimos y la configuración base de 
 
 ***
 
-## Notas importantes del Paso 0
+## Notas importantes:
 *   El servidor FTP/SFTP se comunicará **solo** por la red Host-Only, evitando exposición innecesaria.
 *   Mantén las máquinas actualizadas antes de avanzar.
 
 ***
 
+# FASE 2: Verificación de la conectividad entre servidor y cliente
+
+## Introducción
+
+En esta fase comprobamos que Ubuntu Server y Windows 11 pueden comunicarse a través de la red Host-Only configurada en las máquinas virtuales. Esta verificación es necesaria antes de instalar el servicio FTP/SFTP.
+
+## Objetivo
+
+*   Identificar la IP del servidor Ubuntu.
+*   Comprobar conectividad desde Windows mediante ping.
+*   Validar que la red Host-Only funciona correctamente.
+
+***
+
+## PASO 1 — Comprobar interfaces de red en Ubuntu Server
+
+### Comando ejecutado
+
+    ip a
+
+### Explicación del comando
+
+*   **ip**: herramienta moderna para gestionar la red en Linux.
+*   **a** (addr): muestra todas las interfaces de red y sus direcciones IP.  
+    Sirve para identificar la IP asignada al adaptador Host-Only del servidor (en tu imagen es **192.168.56.101**).
+
+***
+
+## PASO 2 — Verificar conectividad desde Windows 11 hacia Ubuntu Server
+
+### Comando ejecutado (PowerShell)
+
+    ping 192.168.56.101
+
+### Explicación del comando
+
+*   **ping**: herramienta para comprobar si un equipo responde en red.
+*   **192.168.56.101**: IP del servidor Ubuntu obtenida en el paso anterior.  
+    Permite verificar que ambas máquinas se encuentran en la misma red Host-Only y pueden comunicarse.
+
+***
+
+## Notas importantes
+
+*   Si el ping falla, revisar que ambos adaptadores Host-Only están activados en las dos VM.
+*   El adaptador NAT no interviene en esta prueba, solo se usa para acceso a internet.
+*   Esta comprobación es obligatoria antes de instalar FTP, ya que el cliente debe alcanzar al servidor.
+
+***
+
+¿Confirmas que está correcto? Si sí, pasamos a la siguiente fase.
