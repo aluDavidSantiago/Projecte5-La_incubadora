@@ -79,6 +79,8 @@ En esta fase comprobamos que Ubuntu Server y Windows 11 pueden comunicarse a tra
 
 ## PASO 1 — Comprobar interfaces de red en Ubuntu Server
 
+<img src="IMG/2.png" alt="2" width="600" height="auto">
+
 ### Comando ejecutado
 
     ip a
@@ -147,6 +149,8 @@ En esta fase instalamos el servidor FTP **vsftpd** en Ubuntu Server y comprobamo
 
 ### Comando ejecutado
 
+<img src="IMG/3.png" alt="2" width="600" height="auto">
+
     sudo systemctl status vsftpd
 
 ### Explicación del comando
@@ -187,6 +191,8 @@ En esta fase se crea un usuario del sistema que posteriormente utilizaremos para
 ***
 
 ## PASO 1 — Crear el usuario del sistema
+
+<img src="IMG/4.png" alt="4" width="600" height="auto">
 
 ### Comando ejecutado
 
@@ -230,6 +236,8 @@ En esta fase preparamos la estructura de directorios y permisos necesaria para q
 ***
 
 ## PASO 1 — Crear el directorio FTP
+
+<img src="IMG/5.png" alt="5" width="600" height="auto">
 
 ### Comando ejecutado
 
@@ -326,6 +334,10 @@ En esta fase editamos el archivo principal de configuración de **vsftpd** para 
 
 ## PASO 2 — Configurar los parámetros de vsftpd
 
+<img src="IMG/Captura%20de%20pantalla%202026-01-22%20191541.png" alt="5" width="600" height="auto">
+<img src="IMG/Captura%20de%20pantalla%202026-01-22%20193021.png" alt="5" width="600" height="auto">
+<img src="IMG/6.png" alt="5" width="600" height="auto">
+
 ### Líneas añadidas o modificadas
 
     listen=YES
@@ -415,6 +427,8 @@ En esta fase permitimos en el firewall de Ubuntu los puertos necesarios para que
 
 ***
 
+<img src="IMG/7.png" alt="5" width="600" height="auto">
+
 ## PASO 1 — Permitir el puerto 21 (FTP)
 
 ### Comando ejecutado
@@ -492,12 +506,13 @@ En esta fase probamos la conexión desde el cliente Windows 11 al servidor FTP U
 *   Iniciar sesión correctamente con el usuario `ftpuser`.
 
 ***
+<img src="IMG/8.png" alt="8" width="600" height="auto">
 
 ## PASO 1 — Cambiar al directorio de trabajo local en Windows
 
 ### Comando ejecutado
 
-```powershell
+```
 cd C:\Users\Usuario\Desktop
 ```
 
@@ -513,7 +528,7 @@ cd C:\Users\Usuario\Desktop
 
 ### Comando ejecutado
 
-```powershell
+```
 ftp 192.168.56.101
 ```
 
@@ -530,21 +545,21 @@ ftp 192.168.56.101
 Dentro del prompt `ftp>`:
 
 1.  El cliente pide el **usuario**:
-    ```text
+    `
     Usuario (192.168.56.101:(none)): ftpuser
-    ```
+    `
 
 2.  Luego solicita la **contraseña**:
-    ```text
+    `
     Contraseña:
-    ```
+    `
 
 Tras introducir la contraseña correcta, aparece:
 
-```text
+`
 230 Login successful.
 ftp>
-```
+`
 
 ### Explicación
 
@@ -578,6 +593,8 @@ En esta fase verificamos que el usuario `ftpuser` puede **subir archivos** al se
 *   Validar la correcta comunicación del canal de datos FTP.
 
 ***
+
+<img src="IMG/9.png" alt="9" width="600" height="auto">
 
 ## PASO 1 — Subir un archivo al servidor FTP
 
@@ -623,6 +640,8 @@ En esta fase realizamos la conexión al servidor FTP desde FileZilla, un cliente
 *   Establecer la conexión y acceder al directorio `/ftp`.
 
 ***
+
+<img src="IMG/10.png" alt="10" width="600" height="auto">
 
 ## PASO 1 — Abrir el Gestor de Sitios en FileZilla
 
@@ -695,6 +714,8 @@ En esta fase utilizamos **Wireshark** en el cliente Windows para observar cómo 
 
 ***
 
+<img src="IMG/11.png" alt="11" width="600" height="auto">
+
 ## PASO 1 — Iniciar captura en Wireshark
 
 ### Acción realizada
@@ -725,6 +746,8 @@ Durante esta conexión se generan varios tipos de paquetes:
 ***
 
 ## PASO 3 — Identificación del tráfico en Wireshark
+
+<img src="IMG/12.png" alt="12" width="600" height="auto">
 
 ### Lo que se observa en la imagen
 
@@ -766,6 +789,8 @@ En esta fase instalamos y verificamos el funcionamiento del servicio **SSH** en 
 *   Confirmar que el puerto SSH (22) está escuchando.
 
 ***
+
+<img src="IMG/13.png" alt="13" width="600" height="auto">
 
 ## PASO 1 — Instalar el servidor SSH
 
@@ -823,6 +848,8 @@ En esta fase creamos un nuevo usuario llamado **sftpuser**, que será utilizado 
 
 ***
 
+<img src="IMG/14.png" alt="14" width="600" height="auto">
+
 ## PASO 1 — Crear el usuario del sistema para SFTP
 
 ### Comando ejecutado
@@ -864,6 +891,8 @@ En esta fase creamos la estructura de directorios necesaria para el usuario `sft
 *   Asignar permisos correctos para permitir subida de archivos solo dentro de `upload`.
 
 ***
+
+<img src="IMG/15.png" alt="15" width="600" height="auto">
 
 ## PASO 1 — Crear el directorio de subida para SFTP
 
@@ -949,6 +978,8 @@ En esta fase configuramos el servicio SSH para que el usuario `sftpuser` **solo 
 
 ***
 
+<img src="IMG/16.png" alt="16" width="600" height="auto">
+
 ## PASO 1 — Editar el archivo de configuración SSH
 
 ### Comando ejecutado
@@ -1002,6 +1033,10 @@ En esta fase configuramos el servicio SSH para que el usuario `sftpuser` **solo 
 
 *   **AllowTcpForwarding no**  
     Evita túneles SSH y reenvío de puertos.
+    
+Y un reset y status
+
+<img src="IMG/17.png" alt="17" width="600" height="auto">
 
 ***
 
@@ -1031,11 +1066,13 @@ En esta fase probamos el acceso **SFTP** desde el cliente Windows hacia el servi
 
 ***
 
+<img src="IMG/18.png" alt="18" width="600" height="auto">
+
 ### 1. Cambiar al directorio local de trabajo en Windows
 
 #### Comando ejecutado
 
-```powershell
+```
 cd C:\Users\Usuario\Desktop
 ```
 
@@ -1050,7 +1087,7 @@ cd C:\Users\Usuario\Desktop
 
 #### Comando ejecutado
 
-```powershell
+```
 sftp sftpuser@192.168.56.101
 ```
 
@@ -1063,9 +1100,9 @@ sftp sftpuser@192.168.56.101
 
 Al ejecutarlo, pide la contraseña de `sftpuser` y, tras introducirla, se muestra:
 
-```text
+`
 Connected to 192.168.56.101.
-```
+`
 
 indicando que la conexión se ha establecido correctamente por SSH.
 
@@ -1075,7 +1112,7 @@ indicando que la conexión se ha establecido correctamente por SSH.
 
 #### Comando ejecutado dentro de `sftp>`
 
-```text
+```
 pwd
 ```
 
@@ -1083,9 +1120,9 @@ pwd
 
 *   **pwd** (print working directory): muestra el directorio remoto actual.
 *   Respuesta:
-    ```text
+    `
     Remote working directory: /
-    ```
+    `
     En el contexto de la jaula chroot, `/` corresponde a `/home/sftpuser` en el servidor.
 
 ***
@@ -1094,7 +1131,7 @@ pwd
 
 #### Comando ejecutado
 
-```text
+```
 cd upload
 ```
 
@@ -1109,7 +1146,7 @@ cd upload
 
 #### Comando ejecutado
 
-```text
+```
 put archivo.txt
 ```
 
@@ -1118,10 +1155,10 @@ put archivo.txt
 *   **put**: comando SFTP para subir un archivo desde el cliente al servidor.
 *   **archivo.txt**: fichero que se encuentra en el directorio local actual (`Desktop`).
 *   La salida indica algo similar a:
-    ```text
+    `
     Uploading archivo.txt to /upload/archivo.txt
     archivo.txt                                  100%
-    ```
+    `
     Lo que confirma que la subida se ha realizado con éxito al directorio `/upload`.
 
 ***
@@ -1130,7 +1167,7 @@ put archivo.txt
 
 #### Comando ejecutado
 
-```text
+```
 ls
 ```
 
@@ -1165,9 +1202,12 @@ En esta fase mostramos los **resultados finales** de ambas configuraciones: FTP 
 
 ***
 
+
 ### 1. Estado del servicio FTP (vsftpd)
 
 #### Comando ejecutado
+
+<img src="IMG/22.png" alt="22" width="600" height="auto">
 
     sudo systemctl status vsftpd
 
@@ -1183,7 +1223,7 @@ En esta fase mostramos los **resultados finales** de ambas configuraciones: FTP 
 
 #### Comando ejecutado
 
-```powershell
+```
 ftp 192.168.56.101
 ```
 
@@ -1205,6 +1245,8 @@ ftp 192.168.56.101
 ***
 
 ### 3. Estado del servicio SSH (para SFTP)
+
+<img src="IMG/23.png" alt="23" width="600" height="auto">
 
 #### Comando ejecutado
 
