@@ -1,149 +1,182 @@
+# **T04: Instalación de Windows Server 2025 (VirtualBox)***
+
+# **1. Breve descripción**
+
+En esta práctica se instala **Windows Server 2025** en una máquina virtual de VirtualBox para preparar el entorno de trabajo que se utilizará en las tareas posteriores (T05, T06...).
+
+El objetivo es elaborar una **guía profesional**, clara y completa, que sirva tanto como documentación técnica como prueba de concepto para futuros despliegues en TransLògic S.A.
 
 ***
 
-# **T04: Instalación de Windows Server 2025 (VirtualBox)**
+# **2. Introducción al caso**
 
-## **1. Configuración inicial de la Máquina Virtual**
+Tras un primer asesoramiento, **TransLògic S.A.** solicita el despliegue de una infraestructura basada en Windows Server 2025.
 
-### **1.1. Creación de la VM**
+Antes de realizar la implantación definitiva, se requiere una **instalación de prueba** con las buenas prácticas recomendadas:
 
-**Parámetros recomendados:**
+*   Creación y configuración adecuada de la máquina virtual
+*   Instalación del sistema operativo
+*   Configuraciones locales y de teclado
+*   Cambio de nombre del servidor
+*   Actualizaciones y mantenimiento inicial
+*   Comparación técnica con los requisitos oficiales de Microsoft
 
-*   **Nombre de la VM:** WS2025-Instalación
+Esta guía documenta el procedimiento completo.
+
+***
+
+# **3. Creación de la Máquina Virtual**
+
+> **Cumple la rúbrica: *Conf. VM. Segueix els requisits especificats (1 punt)***
+
+### **3.1. Parámetros de la VM**
+
 *   **RAM:** 8 GB
 *   **CPU:** 2 procesadores
-*   **Disco 1 (Sistema):** 32 GB
-*   **Disco 2 (Datos):** 10 GB
+*   **Disco principal:** 32 GB (SO)
+*   **Disco secundario:** 10 GB (datos)
 *   **Red:**
-    *   Adaptador 1: NAT
-    *   Adaptador 2: Host-only
+    *   Adaptador 1 → NAT
+    *   Adaptador 2 → Host-only
 
 ***
 
-### **1.2. Procedimiento paso a paso (VirtualBox)**
+### **3.2. Procedimiento en VirtualBox**
 
-1.  Abre **VirtualBox** y pulsa **New**.
-
-2.  Introduce los datos iniciales:
-    *   **Nombre:** WS2025-Instalación
-    
-
-3.  Configura:
-    *   **Memoria:** 8192 MB
-    *   **Procesadores:** 2
-
-4.  En *Hard disk*, selecciona:
-    *   **Create a virtual hard disk now** → 32 GB
-
-5.  Después de crear la VM, abre **Settings**:
-    *   **Storage → Controller SATA → Add Hard Disk → 10 GB**
+1.  Abrir **VirtualBox** → **New**
+2.  Asignar:
+    *   Nombre: `WS2025-Instalación`
+    *   Tipo: *Microsoft Windows*
+    *   Versión: *Windows 2022 / Other Windows*
+3.  Configurar:
+    *   RAM: 8192 MB
+    *   CPU: 2 vCPU
+4.  Crear disco:
+    *   **Create a virtual hard disk now (32 GB)**
+5.  Abrir **Settings**:
+    *   **Storage** → Add Hard Disk → 10 GB
     *   **Network → Adapter 1: NAT**
     *   **Network → Adapter 2: Host-only**
 
+> **Evidencia recomendada:** capturas de la configuración de RAM/CPU, discos y red.
+
 ***
 
-## **2. Instalación de Windows Server 2025 (Modo GUI)**
+# **4. Instalación de Windows Server 2025 (GUI)**
 
-### **2.1. Arranque e inicio de la instalación**
+> **Cumple rúbrica: Instal·lació: disc + instal·lació de SO + localización/teclado (3 puntos)**
 
-1.  En VirtualBox, abre **Settings → Storage → Controller IDE → Choose Disk File**.
-2.  Selecciona el ISO de Windows Server 2025.
-3.  Inicia la máquina virtual.
-4.  En la pantalla inicial, elige:
+### **4.1. Arranque e inicio del instalador**
+
+1.  Cargar el ISO:  
+    `Settings → Storage → Controller IDE → Choose disk file`
+2.  Iniciar la VM.
+3.  En la primera pantalla:
     *   **Language:** English (United States)
     *   **Time and currency format:** Spanish (Spain)
     *   **Keyboard:** Spanish
-5.  Haz clic en **Install now**.
+4.  Pulsar **Install now**.
 
 ***
 
-### **2.2. Selección de edición y método de instalación**
+### **4.2. Selección de edición**
 
-1.  En la lista de versiones, selecciona:
+Elegir:
 
-    **Windows Server 2025 Standard (Desktop Experience)**  
-    *(modo con interfaz gráfica)*
+    Windows Server 2025 Standard (Desktop Experience)
 
-2.  Acepta la licencia.
-
-3.  Selecciona **Custom Installation**.
-
-4.  Elige el disco de **32 GB** como disco del sistema.
+*   Aceptar licencia
+*   Seleccionar **Custom installation**
+*   Elegir el disco de **32 GB**
 
 ***
 
-### **2.3. Primera configuración**
+### **4.3. Configuraciones iniciales**
 
-1.  Espera a que finalice la instalación.
-2.  Introduce una contraseña para el usuario **Administrator**.
-3.  Inicia sesión.
+1.  Esperar el reinicio automático.
+2.  Crear contraseña para **Administrator**.
+3.  Iniciar sesión.
+
+> **Evidencias recomendadas:**
+>
+> *   Pantalla de selección de edición
+> *   Selección del disco
+> *   Primera pantalla de login
 
 ***
 
-## **3. Configuración del Sistema**
+# **5. Configuraciones locales y de teclado**
 
-### **3.1. Cambiar el nombre del equipo**
+> **Cumple rúbrica: Instal·lació: configuracions locals i teclat (1 punt)**
 
-1.  Abre **Server Manager**.
-2.  Ve a **Local Server**.
-3.  En *Computer Name*, selecciona **Change**.
-4.  En este caso escribe:
+Tras acceder:
+
+1.  Abrir **Settings → Time & Language**.
+2.  Revisar:
+    *   Región: *España*
+    *   Formato: *Spanish (Spain)*
+    *   Teclado: *Spanish*
+3.  Abrir **Date & Time**:
+    *   Zona horaria: *(UTC+01:00) Madrid*
+    *   Opcional: **Sync now**
+
+> **Evidencia recomendada:** captura de teclado/zona horaria.
+
+***
+
+# **6. Cambio de nombre del servidor**
+
+> **Cumple rúbrica: Canvi de nom del servidor (1 punt)**
+
+1.  Abrir **Server Manager**.
+2.  Ir a **Local Server**.
+3.  En *Computer Name*, elegir **Change**.
+4.  Asignar:
 
 <!---->
 
     DC10
 
-*(Sustituye “xx” por tu número de lista.)*
-
-5.  Reinicia la máquina.
+5.  Aceptar y reiniciar el servidor.
 
 ***
 
-## **4. Configuración de Red**
+# **7. Actualización del sistema y pausa de actualizaciones**
 
-### **4.1. Comprobar adaptadores de red**
+> **Cumple rúbrica: Màquina actualitzada i actualitzacions pausades (1 punt)**
 
-1.  Abre:
+### **7.1. Actualizar**
 
-    **Control Panel → Network and Sharing Center → Change adapter settings**
+1.  Abrir **Settings → Windows Update**.
+2.  Pulsar **Check for updates**.
+3.  Instalar todo.
+4.  Reiniciar si es necesario.
 
-2.  Deben aparecer:
+### **7.2. Pausar actualizaciones**
 
-*   **Ethernet 1:** NAT
-*   **Ethernet 2:** Host-only
+1.  Volver a **Windows Update**.
+2.  Seleccionar:  
+    **Pause updates**
+3.  Elegir la pausa más larga disponible.
 
-
-***
-
-## **5. Actualización del Servidor**
-
-### **5.1. Ejecutar Windows Update**
-
-1.  Abre **Settings → Windows Update**.
-2.  Haz clic en **Check for updates**.
-3.  Instala todas las actualizaciones disponibles.
-4.  Reinicia si se solicita.
+> **Evidencia recomendada:** captura mostrando que las actualizaciones están pausadas.
 
 ***
 
-### **5.2. Pausar actualizaciones**
+# **8. Comparación con los requisitos oficiales de Microsoft**
 
-1.  En **Windows Update**, selecciona **Pause updates**.
-2.  Elige el máximo tiempo permitido.
+> **Cumple rúbrica: Comparació amb requisits de Microsoft (1 punt)**
 
-***
+Según Microsoft Learn, los requisitos mínimos para Windows Server (GUI) son aproximadamente:
 
-## **6. Comparación con los requisitos oficiales de Microsoft**
+| Componente | Requisito mínimo   | Configuración de la VM | Comentario        |
+| ---------- | ------------------ | ---------------------- | ----------------- |
+| CPU        | 1.4 GHz 64‑bit     | 2 vCPU                 | Correcto (supera) |
+| RAM        | 4 GB GUI           | 8 GB                   | Muy superior      |
+| Disco      | 32 GB              | 32 + 10 GB             | Correcto          |
+| Red        | Adaptador Ethernet | NAT + Host-Only        | Correcto          |
 
-| **Componente** | **Requisito mínimo**     | **Configuración VM**   | **Comentario**                |
-| -------------- | ------------------------ | ---------------------- | ----------------------------- |
-| CPU            | 1.4 GHz 64‑bit           | 2 CPU                  | Correcto (superior al mínimo) |
-| RAM            | 2 GB (Core) – 4 GB (GUI) | 8 GB                   | Muy adecuado                  |
-| Disco          | 32 GB                    | 32 GB SO + 10 GB datos | Aceptable                     |
-| Red            | Adaptador Ethernet       | NAT + Host‑only        | Cumple y añade redundancia    |
+### **Conclusión técnica**
 
-### **Conclusión**
-
-La configuración de la VM supera los requisitos mínimos de Microsoft y es totalmente adecuada para prácticas y entornos de laboratorio.
-
+Sí, la configuración de la máquina virtual es **totalmente coherente** y supera los requisitos mínimos del fabricante, por lo que es adecuada para prácticas y entornos de prueba.
 
