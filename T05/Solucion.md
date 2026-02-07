@@ -214,7 +214,7 @@ View Script
     ```
 `RUTA DE ARCHIVO EN REPOSITORIO:`
 
-[T05\install-DC-translogic10.ps1.txt](T05\install-DC-translogic10.ps1.txt)
+[T05\install-DC-translogic10.ps1.txt]([T05\install-DC-translogic10.ps1.txt](https://github.com/classesSMX2n/projecte5-aluDavidSantiago/blob/main/T05/install-DC-translogic10.ps1.txt))
 
 El objetivo es que el script:
 
