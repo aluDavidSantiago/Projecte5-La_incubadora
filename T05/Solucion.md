@@ -38,6 +38,7 @@ Este apartado corresponde al criterio: **“Configuració correcta zona i hora�
    - La hora es correcta.
    - La zona horaria es la adecuada.
 
+SE LO VUELVE A RECORDAR/HACER PORQUE ES MUY IMPORTANTE LA HORA
 ---
 
 ## 3. Configuración de red y DNS apuntando al propio servidor
@@ -67,9 +68,7 @@ Este apartado cubre el criterio: **“Conf. DNS apuntant-se a si mateix”**.
 
 7.  Acepta todos los diálogos con **OK**.
 
-> **Evidencia recomendada:**
->
-> *   Captura de la configuración IPv4 donde se vea que el DNS preferido = IP del servidor.
+<img src="IMG/1.png" alt="1" width="600" height="auto">
 
 ***
 
@@ -91,6 +90,10 @@ Este apartado cubre el criterio: **“Instal·lació Rol necessari”**.
 4.  Haz clic en **Next** hasta la pantalla de confirmación.
 5.  Haz clic en **Install**.
 6.  Espera a que termine la instalación (no reinicia todavía).
+
+<img src="IMG/2.png" alt="2" width="600" height="auto">
+
+<img src="IMG/3.png" alt="3" width="600" height="auto">
 
 > **Evidencia recomendada:** captura donde se vea que AD DS y DNS se han instalado correctamente en Server Manager.
 
@@ -120,7 +123,7 @@ Tras instalar AD DS, en la parte superior de Server Manager aparecerá una notif
     translogic10.test
     ```
 
-> Revisa cuidadosamente el nombre: sin faltas, sin espacios, con el número 10.
+> Revisar cuidadosamente el nombre: sin faltas, sin espacios, con el número 10.
 
 #### 5.1.2 Domain Controller Options
 
@@ -130,12 +133,11 @@ Tras instalar AD DS, en la parte superior de Server Manager aparecerá una notif
 *   Marca **Global Catalog (GC)** (debería venir activado por defecto).
 *   Introduce una contraseña segura para **Directory Services Restore Mode (DSRM)**.
 
-> Anota la contraseña de DSRM en la memoria de la práctica (no hace falta escribirla completa, pero indica que se ha configurado correctamente).
 
 #### 5.1.3 Additional Options
 
 *   Mantén las opciones por defecto.
-*   No crear delegación DNS (salvo que el profesor indique lo contrario).
+
 
 #### 5.1.4 Paths
 
@@ -146,6 +148,8 @@ Tras instalar AD DS, en la parte superior de Server Manager aparecerá una notif
     Log files folder: C:\Windows\NTDS
     SYSVOL folder:   C:\Windows\SYSVOL
     ```
+
+<img src="IMG/6.png" alt="6" width="600" height="auto">
 
 ***
 
@@ -163,11 +167,7 @@ Este apartado cubre el criterio: **“Mostrar pantalla resum”**.
 
 3.  Haz una **captura de pantalla** de esta ventana.
 
-> **Evidencia obligatoria:**
->
-> *   Captura de la pantalla de resumen.
-> *   Recomendada: guardar la imagen como, por ejemplo:  
->     `captura-resumen-promocion-dc10.png`.
+
 
 ***
 
@@ -181,6 +181,7 @@ Este apartado cubre el criterio: **“Mostrar pantalla resum”**.
     ```text
     TRANSLOGIC10\Administrator
     ```
+<img src="IMG/7.png" alt="7" width="600" height="auto">
 
 ***
 
@@ -211,53 +212,16 @@ View Script
     ```text
     C:\Users\Administrator\Desktop\install-DC-translogic10.ps1
     ```
+`RUTA DE ARCHIVO EN REPOSITORIO:`
 
-### 6.1 Copiar el script al repositorio
+[T05\install-DC-translogic10.ps1.txt](T05\install-DC-translogic10.ps1.txt)
 
 El objetivo es que el script:
 
 *   Se muestre en la práctica.
 *   **Exista como archivo dentro del repositorio** (GitHub o similar).
 
-Posibles métodos:
 
-#### Método 1: Carpeta compartida de VirtualBox
-
-1.  Configura una carpeta compartida en VirtualBox (`Devices → Shared Folders`).
-
-2.  Desde el servidor, copia:
-
-    ```text
-    C:\Users\Administrator\Desktop\install-DC-translogic10.ps1
-    ```
-
-    a la carpeta compartida.
-
-3.  Desde tu máquina anfitriona, mueve el archivo al repositorio local, por ejemplo:
-
-    ```text
-    /ruta/repositorio/scripts/install-DC-translogic10.ps1
-    ```
-
-4.  Añade y sube el archivo a tu repositorio:
-
-    ```bash
-    git add scripts/install-DC-translogic10.ps1
-    git commit -m "Añadido script de instalación del DC translogic10.test"
-    git push
-    ```
-
-#### Método 2: USB virtual / servicios en la nube
-
-*   Copiar el archivo a un USB virtual de VirtualBox o subirlo a Drive/OneDrive.
-*   Descargarlo en el host y guardarlo dentro del repositorio (`scripts/` o similar).
-
-> En la memoria, indica claramente:
->
-> *   Nombre del archivo: `install-DC-translogic10.ps1`
-> *   Ruta en el repositorio, por ejemplo: `scripts/install-DC-translogic10.ps1`
-
-***
 
 ## 7. Comprobaciones finales
 
