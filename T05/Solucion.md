@@ -214,7 +214,7 @@ View Script
     ```
 `RUTA DE ARCHIVO EN REPOSITORIO:`
 
-[T05\install-DC-translogic10.ps1.txt](T05\install-DC-translogic10.ps1.txt)
+[T05\install-DC-translogic10.ps1.txt](T05/install-DC-translogic10.ps1.txt)
 
 
 ## 7. Comprobaciones finales
