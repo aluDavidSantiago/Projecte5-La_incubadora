@@ -4,8 +4,6 @@
 
 En esta práctica se instala **Windows Server 2025** en una máquina virtual de VirtualBox para preparar el entorno de trabajo que se utilizará en las tareas posteriores (T05, T06...).
 
-El objetivo es elaborar una **guía profesional**, clara y completa, que sirva tanto como documentación técnica como prueba de concepto para futuros despliegues en TransLògic S.A.
-
 ***
 
 # **2. Introducción al caso**
