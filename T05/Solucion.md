@@ -216,25 +216,25 @@ View Script
 
 [T05\install-DC-translogic10.ps1.txt](T05\install-DC-translogic10.ps1.txt)
 
-El objetivo es que el script:
-
-*   Se muestre en la práctica.
-*   **Exista como archivo dentro del repositorio** (GitHub o similar).
-
-
 
 ## 7. Comprobaciones finales
 
 1.  Abrir **Server Manager**:
     *   Comprobar que **AD DS** y **DNS** aparecen sin errores.
+    <img src="IMG/10.png" alt="10" width="600" height="auto">
+
 2.  Abrir **Active Directory Users and Computers**:
     *   Verificar que el dominio `translogic10.test` está creado.
+        <img src="IMG/13.png" alt="12" width="600" height="auto">
+
 3.  Verificar configuración DNS:
     *   La IP del servidor (por ejemplo `192.168.56.10`) tiene como DNS preferido **su propia IP**.
+    <img src="IMG/11.png" alt="11" width="600" height="auto">
 
-> **Evidencia opcional pero recomendable:**
->
-> *   Captura de `Active Directory Users and Computers` mostrando `translogic10.test`.
-> *   Captura de la configuración IPv4 con el DNS configurado a la IP del servidor.
+En caso de CAMBIAR IPs a las cuales apuntaran los adaptadores:
+ <img src="IMG/12.png" alt="13" width="600" height="auto">
+
+
+
 
 ***
