@@ -60,7 +60,6 @@ Esta guía documenta el procedimiento completo.
 
 # **4. Instalación de Windows Server 2025 (GUI)**
 
-> **Cumple rúbrica: Instal·lació: disc + instal·lació de SO + localización/teclado (3 puntos)**
 
 ### **4.1. Arranque e inicio del instalador**
 
@@ -81,9 +80,12 @@ Elegir:
 
     Windows Server 2025 Standard (Desktop Experience)
 
+<img src="IMG/2.png" alt="2" width="600" height="auto">
+
 *   Aceptar licencia
 *   Seleccionar **Custom installation**
 *   Elegir el disco de **32 GB**
+<img src="IMG/3.png" alt="3" width="600" height="auto">
 
 ***
 
@@ -93,17 +95,15 @@ Elegir:
 2.  Crear contraseña para **Administrator**.
 3.  Iniciar sesión.
 
-> **Evidencias recomendadas:**
->
-> *   Pantalla de selección de edición
-> *   Selección del disco
-> *   Primera pantalla de login
+<img src="IMG/13.png" alt="13" width="600" height="auto">
+
+<img src="IMG/5.png" alt="5" width="600" height="auto">
 
 ***
 
 # **5. Configuraciones locales y de teclado**
 
-> **Cumple rúbrica: Instal·lació: configuracions locals i teclat (1 punt)**
+
 
 Tras acceder:
 
@@ -116,13 +116,13 @@ Tras acceder:
     *   Zona horaria: *(UTC+01:00) Madrid*
     *   Opcional: **Sync now**
 
-> **Evidencia recomendada:** captura de teclado/zona horaria.
+<img src="IMG/8.png" alt="13" width="600" height="auto">
 
+<img src="IMG/10.png" alt="13" width="600" height="auto">
 ***
 
 # **6. Cambio de nombre del servidor**
 
-> **Cumple rúbrica: Canvi de nom del servidor (1 punt)**
 
 1.  Abrir **Server Manager**.
 2.  Ir a **Local Server**.
@@ -135,11 +135,13 @@ Tras acceder:
 
 5.  Aceptar y reiniciar el servidor.
 
+<img src="IMG/11.png" alt="11" width="600" height="auto">
+
 ***
 
 # **7. Actualización del sistema y pausa de actualizaciones**
 
-> **Cumple rúbrica: Màquina actualitzada i actualitzacions pausades (1 punt)**
+
 
 ### **7.1. Actualizar**
 
@@ -155,13 +157,13 @@ Tras acceder:
     **Pause updates**
 3.  Elegir la pausa más larga disponible.
 
-> **Evidencia recomendada:** captura mostrando que las actualizaciones están pausadas.
+<img src="IMG/12.png" alt="12" width="600" height="auto">
 
 ***
 
 # **8. Comparación con los requisitos oficiales de Microsoft**
 
-> **Cumple rúbrica: Comparació amb requisits de Microsoft (1 punt)**
+
 
 Según Microsoft Learn, los requisitos mínimos para Windows Server (GUI) son aproximadamente:
 
