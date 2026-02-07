@@ -25,12 +25,10 @@ Esta guía documenta el procedimiento completo.
 
 # **3. Creación de la Máquina Virtual**
 
-> **Cumple la rúbrica: *Conf. VM. Segueix els requisits especificats (1 punt)***
-
 ### **3.1. Parámetros de la VM**
 
-*   **RAM:** 8 GB
-*   **CPU:** 2 procesadores
+*   **RAM:** 4 GB
+*   **CPU:** 4 procesadores
 *   **Disco principal:** 32 GB (SO)
 *   **Disco secundario:** 10 GB (datos)
 *   **Red:**
@@ -56,7 +54,7 @@ Esta guía documenta el procedimiento completo.
     *   **Network → Adapter 1: NAT**
     *   **Network → Adapter 2: Host-only**
 
-> **Evidencia recomendada:** capturas de la configuración de RAM/CPU, discos y red.
+<img src="IMG/7.png" alt="7" width="600" height="auto">
 
 ***
 
