@@ -325,7 +325,7 @@ nslookup translogic10.test
 # Probar conectividad al DC
 ping 192.168.56.10
 
-<img src="IMG/14.png" alt="14" width="800" height="auto">
+<img src="IMG/14.png" alt="14" width="900" height="auto">
 
 ### Paso 4: Unir al dominio
 
@@ -379,9 +379,9 @@ En **PC1**:
    * Juan
    * Santiago
 
-<img src="IMG/20.png" alt="20" width="800" height="auto">
-<img src="IMG/21.png" alt="21" width="800" height="auto">
-<img src="IMG/22.png" alt="22" width="800" height="auto">
+<img src="IMG/20.png" alt="20" width="900" height="auto">
+<img src="IMG/21.png" alt="21" width="900" height="auto">
+<img src="IMG/22.png" alt="22" width="900" height="auto">
 
 ### Verificaciones
 
@@ -391,4 +391,4 @@ En **PC1**:
 * No acceso a carpetas de otros usuarios
 
 Carpetas creadas en el disco y muestra de que no pueden acceder a carpetas de otros usuarios:
-<img src="IMG/23.png" alt="23" width="800" height="auto">
+<img src="IMG/23.png" alt="23" width="900" height="auto">
