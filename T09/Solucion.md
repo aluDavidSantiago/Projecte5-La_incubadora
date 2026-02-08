@@ -208,9 +208,9 @@
 
 OTRAS:
 
-<img src="IMG/47.png" alt="47" width="800" height="auto">
+<img src="IMG/47.png" alt="47" width="900" height="auto">
 
-<img src="IMG/48.png" alt="35" width="800" height="auto">
+<img src="IMG/48.png" alt="35" width="900" height="auto">
 
 ## 5. Medidas Generales de Mitigación
 
