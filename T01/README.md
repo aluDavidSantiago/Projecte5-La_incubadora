@@ -75,6 +75,3 @@ Heu d’ensenyar:
 *   Chatbot funcional
 *   Estudi de mercat + pla de negoci
 
-***
-
-Si vols, et puc fer **una versió ultra-resumida**, o una **versió en format presentació** llesta per usar.
