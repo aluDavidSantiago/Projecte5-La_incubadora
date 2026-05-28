@@ -98,7 +98,7 @@ con una solución técnica viable y defendible.
 <h2>5. Metodología</h2>
 
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Microsoft_Planner_%282024%E2%80%93present%29.svg" width="120">
+  <img src="https://www.escueladenegocio.com/wp-content/uploads/2015/01/proceso-design-thinking-e1531736199177.png" width="500">
 </p>
 
 <ul>
